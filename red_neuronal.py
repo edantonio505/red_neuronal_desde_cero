@@ -9,6 +9,27 @@ import tqdm
 
 
 
+
+
+
+
+# DESCARGAR ARCHIVOS A LA CARPETA
+# mnist_dataset/
+# set de datos de entrenamiento completo
+# http://www.pjreddie.com/media/files/mnist_train.csv
+
+
+# set de datos de testeo completo
+# http://www.pjreddie.com/media/files/mnist_test.csv
+
+
+
+
+
+
+
+
+
 # ===============================
 # funciones de algebra lineal
 # ==============================
@@ -147,7 +168,8 @@ def argmax(xs: list) -> int:
 
 
 
-
+# funcion para convertir los 
+# set de datos desde texto a vectores
 def convertir_letras_en_vector(dataframe):
     new_dataframe = []
     new_labels = []
@@ -165,7 +187,6 @@ def convertir_letras_en_vector(dataframe):
     #     1 = [0.1, 0.99, 0.1, 0.1, 0.1 , 0.1, 0.1, 0.1, 0.1, 0.1]
     #     ...
     # """
-
     encoded_labels = []
     for numero in new_labels:
         label = [0.1 for _ in range(10)]
